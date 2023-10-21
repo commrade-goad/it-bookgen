@@ -70,7 +70,7 @@ fn main() {
             }
         }
     } else {
-        eprintln!("ERR: Did't get any program mode");
+        eprintln!("ERR: Didn't get any program mode");
         std::process::exit(1);
     }
     match mode {
@@ -111,19 +111,4 @@ fn main() {
             println!("{result_json}");
         }
     }
-    /* let content = read_file(&user_args[1]);
-    let mut json_object: Vec<Book> = Book::parse_json(&content).unwrap();
-
-    let dummy: Book = Book {
-    name: "test".to_string(),
-    author: "me".to_string(),
-    path: "".to_string(),
-    image: "".to_string(),
-    synopsys: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.".to_string(),
-    tag: vec!["Not".to_string(), "a".to_string(), "real".to_string(), "tag".to_string()]
-    };
-
-    json_object.push(dummy);
-    let json_str: String = serde_json::to_string(&json_object).unwrap();
-    println!("{}", json_str); */
 }

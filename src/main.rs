@@ -1,5 +1,4 @@
 mod book;
-use book::vec_to_json;
 use book::Book;
 use std::env;
 use std::fs;
@@ -86,7 +85,7 @@ fn main() {
                     }
                 };
                 json_object.push(book_form());
-                let result_json: String = match vec_to_json(&json_object) {
+                let result_json: String = match Book::vec_to_json(&json_object) {
                     Some(val) => val,
                     None => {
                         eprintln!("ERR: Failed to convert object to json");

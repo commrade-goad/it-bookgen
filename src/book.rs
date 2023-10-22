@@ -25,11 +25,11 @@ impl Book {
             Err(_) => return None,
         };
     }
-}
 
-pub fn vec_to_json(obj: &Vec<Book>) -> Option<String> {
+    pub fn vec_to_json(obj: &Vec<Book>) -> Option<String> {
         match serde_json::to_string(&obj) {
             Ok(val) => return Some(val),
             Err(_) => return None,
         };
+    }
 }

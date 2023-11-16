@@ -44,6 +44,8 @@ fn book_form() -> Book {
     for item in parsed_tag {
         final_tag.push(item.trim().to_owned().to_string());
     }
+    let p_rating: String = user_input("Please Type the rating : ");
+    let final_rating: u8 = p_rating.trim().parse().unwrap();
 
     return Book {
         name: p_name.trim().to_string(),
@@ -52,6 +54,7 @@ fn book_form() -> Book {
         path: p_path.trim().to_string(),
         image: p_image.trim().to_string(),
         tag: final_tag,
+        rating: final_rating,
     };
 }
 

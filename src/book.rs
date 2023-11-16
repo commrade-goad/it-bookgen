@@ -8,6 +8,7 @@ pub struct Book {
     pub path: String,
     pub image: String,
     pub tag: Vec<String>,
+    pub rating: u8,
 }
 
 impl Book {
